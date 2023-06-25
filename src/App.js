@@ -1,6 +1,5 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import React from "react";
 import "./App.css";
 import Quiz from "./components/Quiz";
 import Navbar from "./components/Navbar";

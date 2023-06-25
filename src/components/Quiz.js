@@ -94,8 +94,27 @@ const Quiz = () => {
             Question: {currentQuestion + 1} out of {questions.length}
           </h2> 
           <div className="question-box">
+          <div style={{display:"flex",flexDirection:"column",width:"80%"}}>
           <h3 className="question-text">{questions[currentQuestion].text}</h3>
+          <div style={{display:"flex", justifyContent:"space-evenly",marginTop:"6rem"}}>
 
+            <button id="btn" 
+             onClick={()=>{
+              if(currentQuestion+1>1){
+                setCurrentQuestion(currentQuestion-1);
+              }
+             }}
+            >Pre</button>
+            <button id="btn"
+              onClick={()=>{
+                if (currentQuestion + 1 < questions.length) {
+                setCurrentQuestion(currentQuestion+1);
+                }
+              }}
+             >Next</button>
+                       </div>
+
+          </div>
           <ul className="options">
             {questions[currentQuestion].options.map((option) => {
               return (
